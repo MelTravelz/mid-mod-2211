@@ -10,7 +10,7 @@ RSpec.describe "/foods", type: :feature do
 
       expect(current_path).to eq("/foods")
 
-      expect(page).to have_content("Search Results")
+      expect(page).to have_content("Search Results for 'sweet potatoes'")
       expect(page).to have_content("Total Count: 38114")
       
       expect(page).to have_content("Top 10 Foods:")
@@ -22,6 +22,7 @@ RSpec.describe "/foods", type: :feature do
         expect(page).to have_content("Brand: The Hain Celestial Group, Inc.")
         expect(page).to have_content("Ingredients: A blend of sweet potatoes (sweet potato, purple sweet potato, batata), avocado oil, sea salt.")
       end
+      save_and_open_page
     end
   end
 end
