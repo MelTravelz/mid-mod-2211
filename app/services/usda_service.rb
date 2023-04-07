@@ -4,7 +4,7 @@ class UsdaService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def get_search(food_word)
+  def get_10_foods(food_word)
     fetch_api("foods/search?pageSize=10&ingredients=#{food_word}")
   end
   
