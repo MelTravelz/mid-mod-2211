@@ -18,10 +18,10 @@ class UsdaFacade
     end
   end
 
-  # Maybe this will work: 
-  # def find_total_count_by_ingredient(food_word)
-  #   food_info = usda_service.get_10_foods(food_word)
-  #   food_info[:totalHits]
-  # end
+  def find_total_count_by_ingredient(food_word)
+    food_info = usda_service.get_10_foods(food_word)
+    OpenStruct.new(total_count: food_info[:totalHits])
+    # if only want to return an integer: food_info[:totalHits]
+  end
  
 end
